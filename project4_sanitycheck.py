@@ -253,7 +253,7 @@ def run_test() -> None:
 
             print_labeled_output(
                 'PASSED',
-                'Your Project 1 implementation passed the sanity checker.  Note that',
+                'Your Project 4 implementation passed the sanity checker.  Note that',
                 'there are many other tests you\'ll want to run on your own, because',
                 'a number of other scenarios exist that are legal and interesting.')
         except TestFailure:
@@ -267,14 +267,14 @@ def run_test() -> None:
 
 
 def start_process() -> TextProcess:
-    module_path = Path.cwd() / 'project1.py'
+    module_path = Path.cwd() / 'project4.py'
 
     if not module_path.exists() or not module_path.is_file():
         print_labeled_output(
             'ERROR',
-            'Cannot find an executable "project1.py" file in this directory.',
+            'Cannot find an executable "project4.py" file in this directory.',
             'Make sure that the sanity checker is in the same directory as the',
-            'files that comprise your Project 1 solution.')
+            'files that comprise your Project 4 solution.')
 
         raise TestFailure()
     else:
@@ -317,8 +317,8 @@ def make_test_input_file() -> Path:
 def make_test_lines(input_path: Path) -> list[TestInputLine | TestOutputLine]:
     return [
         TestInputLine(str(input_path)),
-        TestInputLine('5')
-        TestInputLine('HowIsBoo')
+        TestInputLine('5'),
+        TestInputLine('HowIsBoo'),
         TestOutputLine('Boo is perfect today', 10.0),
         TestOutputLine('Boo is perfect today', 10.0),
         TestOutputLine('Boo is perfect today', 10.0),
