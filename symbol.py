@@ -1,13 +1,17 @@
-class TerminalSymbol:
+class Terminal:
 
     def __init__(self, symbol):
         self.symbol = symbol
 
+    def generate_fragment(self):
+        yield self.symbol
 
+class Variable:
 
-class VariableSymbol:
+    def __init__(self, name):
+        self.name = name
 
-    def __init__(self, symbol):
-        self.symbol = symbol
+    def generate_fragment(self):
+        pass
 
 
