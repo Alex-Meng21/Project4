@@ -5,7 +5,11 @@
 
 
 def main() -> None:
-    pass
+    file = input()
+    num = int(input())
+    variable = input()
+
+
 
 
 if __name__ == '__main__':
