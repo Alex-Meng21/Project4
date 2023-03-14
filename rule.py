@@ -1,3 +1,4 @@
+import random
 class Rule:
 
     def __init__(self, variable, options):
@@ -6,4 +7,6 @@ class Rule:
         self.options = options
 
     def generate(self):
-        pass
+
+        option = random.choices(self.options, [opt.weight for opt in self.options])[0]
+        yield from option.generate()
